@@ -77,3 +77,57 @@ carros_v3.reverse() # Aqui podemos mostrar de forma inversa a lista sem mexer na
 print(carros_v3)
 
 print('Tamanho da lista de carros: ' + str(len(carros_v3)))
+
+print('-----')
+
+##
+## Trabalhando com o for
+
+magicos = ['alice', 'david', 'carolina']
+for magico in magicos:
+    print(magico)
+
+print('-----')
+
+magicos = ['alice', 'david', 'carolina']
+for magico in magicos:
+    print(magico.title() + ", that was a great trick!")
+    print("I can't wait to see your next trick, " + magico.title() + ".\n")
+
+print('Thank you, everyone. That was a great magic show!')
+
+print('-----')
+
+##
+## for com numeros
+
+for value in range(1,6):
+    print(value)
+
+numeros = list(range(1,6)) ## é possivel converter um range de numeros diretamente em lista
+print(numeros)
+
+numeros_pares = list(range(2,11,2)) ## forma de exibir uma lista com numeros apenas pares.
+print(numeros_pares)
+
+quadrados = []
+for value in range(1,11):
+    quadrado = value**2 ## forma de criar um lista com quadrados perfeitos.
+    quadrados.append(quadrado)
+
+print(quadrados)
+
+quadrados = []
+for value in range(1,11):
+    quadrados.append(value**2) ## forma mais resumidade de criar um lista com quadrados perfeitos.
+
+print(quadrados)
+
+quadrados = [value**2 for value in range(1,11)] ## exemplo de list comprehensions
+print(quadrados)
+
+digitos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+print(digitos)
+print('Valor minimo da lista: ' + str(min(digitos)))
+print('Valor maximo da lista: ' + str(max(digitos)))
+print('Soma dos valores da lista: ' + str(sum(digitos)))
