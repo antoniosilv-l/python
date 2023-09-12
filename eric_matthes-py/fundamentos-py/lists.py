@@ -131,3 +131,61 @@ print(digitos)
 print('Valor minimo da lista: ' + str(min(digitos)))
 print('Valor maximo da lista: ' + str(max(digitos)))
 print('Soma dos valores da lista: ' + str(sum(digitos)))
+
+print('-----')
+
+##
+## Fatiando listas.
+
+print('\n')
+
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print('Lista original: ' + str(players))
+print('Pegando um conjunto de dados do primeiro ao terceiro item: ' + str(players[0:3])) # Pegando um conjunto especifico de dados
+print('Pegando um conjunto de dados até o quarto item: ' + str(players[:4])) # Pegando até o quarto item da lista
+print('Pegando um conjunto de dados a partir do 2: ' + str(players[2:]))
+print('Pegando um conjunto de dados começando do final: ' + str(players[-3:]))
+
+print('\n')
+print('Percorrendo uma lista for usando fatias...')
+print('Here are the first three players on my team: ')
+for player in players[:3]:
+    print(player.title())
+
+##
+## Copiando listas.
+
+print('\n')
+
+my_foods = ['pizza', 'falafel', 'carrot cake']
+friend_foods = my_foods[:]
+
+my_foods.append('cannoli')
+friend_foods.append('ice cream')
+
+print('My favorite foods are: ')
+print(my_foods)
+
+print("\nMy friend's favorite foods are:")
+print(friend_foods)
+
+print('-----')
+
+##
+## Tuplas
+## Tuplas são listas que possuem dados imutaveis ao inves de colchetes usamos parenteses.
+
+print('\n')
+
+dimensions = (200, 50)
+print('Original dimensions:')
+#print(dimensions[0])
+#print(dimensions[1])
+
+for dimension in dimensions:
+    print(dimension)
+
+dimensions = (400, 100)
+print('\nModified dimensions:')
+for dimension in dimensions:
+    print(dimension)
