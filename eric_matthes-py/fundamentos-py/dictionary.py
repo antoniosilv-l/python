@@ -190,3 +190,69 @@ for alien in aliens[0:3]:
 for alien in aliens[0:5]:
     print(alien)
 print('...')
+
+## Lista dentro de um dicionario
+print('\n----')
+print('Listas dentro de dicionarios.')
+
+pizza = {
+    'crust': 'thick',
+    'toppings': ['mushrooms', 'extra cheese'],
+}
+
+print('You ordered a ' + pizza['crust'] + '-crust pizza' + ' with the following toppings:')
+for topping in pizza['toppings']:
+    print('\t' + topping)
+
+print('----')
+print('Outro exemplo.')
+
+favorite_language = {
+    'jen': ['python', 'ruby'],
+    'sarah': ['c'],
+    'edward': ['ruby', 'go'],
+    'phil': ['python', 'haskell'],
+}
+
+for name, languages in favorite_language.items():
+    print('\n' + name.title() + "'s favorite languages are:")
+    for language in languages:
+        print('\t' + language.title())
+
+print('----')
+print('Outro exemplo, aperfeiçoado.')
+
+for name, languages in favorite_language.items():
+    if len(languages) == 1:
+        for language in languages:
+            print('\n' + name.title() + "'s favorite language is " + language.title())
+    else:
+        print('\n' + name.title() + "'s favorite language are:")
+        for language in languages:
+            print('\t' + language.title())
+
+## Dicionario dentro de dicionario.
+print('\n----')
+print('Dicionarios dentro de dicionarios.')
+
+users = {
+    'aeinstein': {
+        'first': 'albert',
+        'last': 'einstein',
+        'location': 'princeton',
+    },
+
+    'mcurie': {
+        'first': 'marie',
+        'last': 'curie',
+        'location': 'paris',
+    }
+}
+
+for username, user_info in users.items():
+    print('\nUsername: ' + username)
+    full_name = user_info['first'] + ' ' + user_info['last']
+    location = user_info['location']
+
+    print('\tFull name: ' + full_name.title())
+    print('\tLocation: ' + location.title())
