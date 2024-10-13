@@ -1,7 +1,15 @@
-##
-## IF é uma instrução que permite analisar o estado atual de um programa e responder
-## de forma apropriada a esse estado
+'''
+Tabralhando com IF é uma instrução que permite analisar o estado atual de um programa e responder
+de forma apropriada a esse estado.
+- if
+- for
+- list
+- tabulação
+- condicionais
+- Verificações
+'''
 
+print("---- IF ----")
 print('Exemplo de if, BMW ficará maiuscula e o resto apenas a inicial.')
 
 cars = ['audi', 'bmw', 'subaru', 'toyota']
@@ -12,19 +20,16 @@ for car in cars:
     else:
         print(car.title())
 
-print('----')
-print('\n')
 
-## Teste condicionais
-## Verificação de igualdade
+print("---- Condicionais ----")
 car = 'audi'
 
 print('Testando se a variavel é igual a string passada. String: audi')
 print(car == 'bmw')
 print(car == 'audi')
 
-##
-print('----')
+
+print("---- Condicionais + Lower Case ----")
 car = 'Audi'
 
 print('''
@@ -34,8 +39,8 @@ String: audi
 print(car.lower() == 'bmw')
 print(car.lower() == 'audi')
 
-##
-print('----')
+
+print("---- Verificações ----")
 print('Testando se a variavel é igual a int passada. int: 18')
 age = 18
 print(age == 18)
@@ -45,27 +50,24 @@ age = 17
 if age != 42:
     print('That is not the corret answer. Please try again!')
 
-## Verificação de diferença
-print('----')
 
+print("---- Verificações Diferenças ----")
 print('Testando se a variavel é diferente a string passada. String: mushrooms')
 requested_topping = 'mushrooms'
 
 if requested_topping != 'anchovies':
     print('Hold the anchovies!!')
 
-## Verificação se um item já está dentro de uma lista
-print('----')
 
+print("---- Verificações Itens dentro da Lista ----")
 print('Verificando se um item já está dentro de uma lista.')
 requested_topping = ['mushrooms', 'onions', 'pineapple']
 
 print('Verificando se o item "mushrooms" já está dentro da lista: ' + str('mushrooms' in requested_topping))
 print('Verificando se o item "pepperoni" já está dentro da lista: ' + str('pepperoni' in requested_topping))
 
-## Verificação se um item não está dentro de uma lista
-print('----')
 
+print("---- Verificações Itens não está dentro da Lista ----")
 print('Verificando se um item não está dentro de uma lista.')
 print('Verificando seo usuario foi banido: ')
 banned_users = ['andrew', 'carolina', 'david']
@@ -74,8 +76,8 @@ user = 'marie'
 if user not in banned_users:
     print(user.title() + ', you can post a response if you wish')
 
-## Começando a trabalhar com if-else
-print('----')
+
+print("---- IF-ELSE ----")
 print('Testando se a idade já permite votar. Começo do if-else')
 age = 17
 
@@ -86,9 +88,11 @@ else:
     print('Sorry, you are too young to vote.')
     print('please register to vote as soon as you turn 18!')
 
-## Começando a trabalhar com if-elif-else
-## Essa tecnica é muito util quando apenas um dos testes deve ser True.
-print('----')
+
+print("---- IF-ELIF-ELSE ----")
+'''
+    Essa tecnica é muito util quando apenas um dos testes deve ser True.
+'''
 print('Testando valores pagos em um parque. Começo do if-elif-else')
 age = 67
 
@@ -112,9 +116,11 @@ elif age >= 65:
 
 print('You admission cost is $' + str(price) + '.')
 
-## Começando a trabalhar com if encadeado.
-## Essa tecnica é muito util quando mais de um teste deve ser True
-print('----')
+
+print("---- IF-ELIF-ELSE ----")
+'''
+    Essa tecnica é muito util quando mais de um teste deve ser True
+'''
 print('Testando itens de uma pizza. Utilizando if encadeados.')
 
 requested_toppings = ['mushrooms', 'extra cheese']
@@ -127,9 +133,8 @@ if 'extra cheese' in requested_toppings:
     print('Adding extra cheese')
 print('\nFinished making your pizza!')
 
-## IF + Listas.
-## Unindo essas duas tenicas é possivel deixar o código mais versatil.
-print('----')
+
+print("---- IF + Listas ----")
 print('Testando itens de uma pizza. Começo do if  + listas')
 
 requested_toppings = ['mushrooms', 'green peppers', 'extra cheese']
@@ -140,8 +145,7 @@ for requested_topping in requested_toppings:
     else:
         print('Adding ' + requested_topping + '.')
 
-## Checando se a lista está vazia.
-print('----')
+print("---- Listas Vazias ----")
 print('Testando se a lista de itens de uma pizza está vazia. Continuação do if  + listas')
 
 requested_toppings = []
@@ -153,8 +157,7 @@ if requested_toppings:
 else:
     print('Are you sure you want a plain pizza?')
 
-## Usando duas listas.
-print('----')
+print("---- Listas Duplas ----")
 print('Testando duas listas de itens de uma pizza. Continuação do if  + listas')
 
 available_toppings = ['mushrooms', 'olives', 'green peppers', 'pepperoni', 'pineapple', 'extra cheese']

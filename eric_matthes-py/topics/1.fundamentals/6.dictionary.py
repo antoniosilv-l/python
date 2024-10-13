@@ -1,6 +1,14 @@
-## Introdução a utilização de dicionarios em python.
+'''
+Tabralhando com Dicionarios
+- dict
+- Incluindo, alterando e removendo itens.
+- if, elif e else
+- tabulação
+- for
+- ordenação
+'''
 
-print('----')
+print("---- dicts ----")
 print('Exemplo de dicionario, personagens de um jogo.')
 
 alien_0 = {'color': 'green', 'points': 5}
@@ -8,15 +16,15 @@ alien_0 = {'color': 'green', 'points': 5}
 print(alien_0['color'])
 print(alien_0['points'])
 
-## Podemos armazenar informações em outras variaveis.
-print('----')
+
+print("---- dicts + variaveis ----")
 print('Utilizando informações de um dicionario.')
 
 new_points = alien_0['points']
 print('You Just earned ' + str(new_points) + ' points!')
 
-## Acrescentando novos itens ao dicionario
-print('----')
+
+print("---- Incluindo itens ----")
 print('Incluindo novos itens ao dicionario.')
 
 alien_0['x_position'] = 0
@@ -24,8 +32,8 @@ alien_0['y_position'] = 25
 
 print(alien_0)
 
-## Modificando itens de um dicionario.
-print('----')
+
+print("---- Modificando itens ----")
 print('Modificando itens do dicionario.')
 
 alien_0 = {'color': 'green'}
@@ -52,8 +60,8 @@ else:
 alien_0['x_position'] = alien_0['x_position'] + x_increment
 print('New x-position: ' + str(alien_0['x_position']))
 
-## Removendo itens de um dicionario
-print('----')
+
+print("---- Removendo itens ----")
 print('Removendo itens de um dicionario.')
 
 alien_0 = {'color': 'green', 'points': 5}
@@ -62,10 +70,8 @@ print(alien_0)
 del alien_0['points']
 print(alien_0)
 
-## Continuação sobre armazenamento de dados em dicionario
-print('----')
-print('Evoluindo o dicionario.')
 
+print("---- Evoluindo o dicionario ----")
 favorite_language = {
     'jen': 'python',
     'sarah': 'c',
@@ -75,10 +81,8 @@ favorite_language = {
 
 print("Sarah's favorite language is " + favorite_language['sarah'].title() + '.')
 
-## Percorrendo um dicionario com um laço
-print('----')
-print('Laço + dicionario.')
 
+print("---- for + dicts ----")
 user_0 = {
     'username': 'efermi',
     'first': 'enrico',
@@ -90,7 +94,6 @@ for key, value in user_0.items():
     print('Value: ' + value)
 
 print('----')
-print('Outro exemplo, Laço + dicionario.')
 
 favorite_language = {
     'jen': 'python',
@@ -102,16 +105,12 @@ favorite_language = {
 for name, language in favorite_language.items():
     print(name.title() + "'s favorite language is " + language.title() + '.')
 
-## Percorrendo todas as chaves de um dicionario.
-print('----')
-print('Percorrendo as chaves de um dicionario.')
-
+print("---- Percorrendo as chaves de um dicionario. ----")
 for name in favorite_language.keys():
     print(name.title())
 
-print('----')
-print('Exibindo dados para apenas quem permitirmos.')
 
+print("---- Exibindo dados para apenas quem permitirmos. ----")
 friends = ['phil', 'sarah']
 
 for name in favorite_language.keys():
@@ -123,18 +122,16 @@ for name in favorite_language.keys():
 if 'erin' not in favorite_language.keys():
     print('\nErin, please take our poll!')
 
-## Ordenando as chaves
-print('----')
-print('Ordenando os itens exibidos de um dicionario.')
 
+print("---- Ordenando os itens exibidos de um dicionario. ----")
 for name in sorted(favorite_language.keys()):
     print(name.title() + ', thank you for taking the poll.')
 
-## Percorrendo todas os valores de um dicionario.
-## A utilização da função set() retira qualquer duplicidade que existir.
-print('----')
-print('Exibindo os valores de um dicionario.')
 
+print("---- Exibindo os valores de um dicionario. ----")
+'''
+- A utilização da função set() retira qualquer duplicidade que existir.
+'''
 print('The following languages have been mentioned: (Duplicidade)')
 
 for language in favorite_language.values():
@@ -146,8 +143,7 @@ for language in set(favorite_language.values()):
     print(language.title())
 
 
-## Dicionarios Aninhados
-print('----')
+print("---- Dicionarios Aninhados ----")
 print('Criando uma lista de dicionarios.')
 
 alien_0 = {'color': 'green', 'points': 5}
@@ -159,9 +155,8 @@ aliens = [alien_0, alien_1, alien_2]
 for alien in aliens:
     print(alien)
 
-print('----')
-print('Criando varios itens de um dicionario de uma vez.')
 
+print("---- Criando varios itens de um dicionario de uma vez. ----")
 aliens = []
 
 for alien_number in range(30):
@@ -172,9 +167,8 @@ for alien in aliens[:5]:
     print(alien)
 print('...')
 
-print('----')
-print('Alterando alguns itens de um dicionario.')
 
+print("---- Alterando alguns itens de um dicionario. ----")
 print('Total number of aliens: ' + str(len(aliens)))
 
 for alien in aliens[0:3]:
@@ -191,10 +185,8 @@ for alien in aliens[0:5]:
     print(alien)
 print('...')
 
-## Lista dentro de um dicionario
-print('\n----')
-print('Listas dentro de dicionarios.')
 
+print("---- Listas dentro de dicionarios. ----")
 pizza = {
     'crust': 'thick',
     'toppings': ['mushrooms', 'extra cheese'],
@@ -205,7 +197,6 @@ for topping in pizza['toppings']:
     print('\t' + topping)
 
 print('----')
-print('Outro exemplo.')
 
 favorite_language = {
     'jen': ['python', 'ruby'],
@@ -220,7 +211,6 @@ for name, languages in favorite_language.items():
         print('\t' + language.title())
 
 print('----')
-print('Outro exemplo, aperfeiçoado.')
 
 for name, languages in favorite_language.items():
     if len(languages) == 1:
@@ -231,10 +221,8 @@ for name, languages in favorite_language.items():
         for language in languages:
             print('\t' + language.title())
 
-## Dicionario dentro de dicionario.
-print('\n----')
-print('Dicionarios dentro de dicionarios.')
 
+print("---- Dicionarios dentro de dicionarios. ----")
 users = {
     'aeinstein': {
         'first': 'albert',
